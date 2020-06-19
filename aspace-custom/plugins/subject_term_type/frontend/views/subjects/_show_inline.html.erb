@@ -1,0 +1,38 @@
+<%
+   section_id = "subjects" if section_id.blank?
+%>
+
+<section id="<%= section_id %>" class="subrecord-form-dummy">
+  <h3><%= I18n.t("subject._plural") %></h3>
+  <div class="subrecord-form-container">
+    <div class="subrecord-form-fields">
+      <div class="row">
+        <div class="col-md-2"><strong><%= "Term Type" %></strong></div>
+        <div class="col-md-4"><strong><%= I18n.t("subject.heading") %></strong></div>
+        <div class="col-md-6"><strong><%= I18n.t("subject.authority_id") %></strong></div>
+      </div>
+      <% subjects.each_with_index do | subject, index | %>
+        <div class="row">
+          <div class="col-md-2 pull1">
+            <%= I18n.t("enumerations.subject_term_type.#{subject['_resolved']['terms'][0]['term_type']}", :default => subject['_resolved']['terms'][0]['term_type']) %>
+          </div>
+          <div class="col-md-4 token-list">
+            <%= render_token :object => subject['_resolved'],
+                             :label => subject['_resolved']['title'],
+                             :type => "subject",
+                             :uri => subject['ref'] %>
+          </div>
+          <div class="col-md-6 pull1">
+            <% auth_id = (subject['_resolved']["authority_id"] || "") %>
+            <% auth_uri = (auth_id || "").slice(URI.regexp) %>
+            <% if auth_id.blank? %>
+              <%= subject['_resolved']["source"] %>
+            <% else %>
+              <%= link_to_unless(auth_uri.nil?, subject['_resolved']["authority_id"], auth_uri, target: "_blank") %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>

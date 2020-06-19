@@ -1,0 +1,17 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    nokogiri (1.8.4-java)
+    rubyXL (3.3.29)
+      nokogiri (>= 1.4.4)
+      rubyzip (>= 1.1.6)
+    rubyzip (1.2.2)
+
+PLATFORMS
+  java
+
+DEPENDENCIES
+  rubyXL (= 3.3.29)
+
+BUNDLED WITH
+   1.16.1

@@ -1,0 +1,4 @@
+en:
+  validation_errors:
+    database_integrity_constraint_conflict__java__javasql__sqlexception__field__ref_id__doesn_t_have_a_default_value: Could not be auto-generated without EAD ID
+    an_archival_object_ref_id_must_be_unique_to_its_resource: Must be a unique value

@@ -1,0 +1,415 @@
+en:  
+  enumerations:
+    accession_acquisition_type:
+      gift: Gift
+      fractional_partial_gift: Fractional or Partial Gift
+      bequest: Bequest
+      purchase: Purchase
+      bargain_sale: Bargain Sale
+      exchange: Exchange
+      transfer: Transfer
+      transfer_governmental: Governmental Transfer 
+      transfer_internal: Internal Transfer
+      field_collection: Field Collection
+      found_in_collection: Found in Collection
+      propagation: Propagation
+      deposit: Deposit
+      commissioned: Commissioned (Made For)      
+    resource_finding_aid_status:
+      publish: Publish (sync with EDAN/SOVA)
+      in_progress: In progress
+      under_revision: Under revision
+      review: Review
+      unprocessed: Unprocessed
+      staff_only: Staff Only
+    name_source:
+      ingest: Unspecified ingested source
+      lcshac: Library of Congress Children's Subject Headings
+      local: Local sources
+      naf: NACO Authority File
+      nad: NAD / ARK II Name Authority Database
+      ulan: Union List of Artist Names
+      source_not_specified: Source Not Specified
+    subject_term_type:
+      cultural_context: Culture
+      function: Function 
+      genre_form: Genre / Form    
+      geographic: Geographic  
+      occupation: Occupation 
+      style_period: Style / Period    
+      technique: Technique   
+      temporal: Temporal    
+      topical: Topic 
+      uniform_title: Uniform Title
+    subject_source:
+      aat: "Art & Architecture Thesaurus"
+      cash: Canadian Subject Headings
+      gmgpc: "TGM II, Genre and physical characteristic terms"
+      ingest: Unspecified ingested source
+      lcsh: Library of Congress Subject Headings
+      lcshac: Library of Congress Children's Subject Headings
+      local: Local sources
+      mesh: Medical Subject Headings
+      nal: National Agricultural Library subject headings
+      rbgenr: "Genre Terms: A Thesaurus for Use in Rare Book and Special Collections Cataloguing"
+      tgn: Getty Thesaurus of Geographic Names
+      source_not_specified: Source Not Specified
+      afset: American Folklore Society Ethnographic Thesaurus
+      hraf: Human Relations Area Files
+      smda: Smithsonian National Air and Space Museum Directory of Airplanes
+      lctgm: Thesaurus for Graphic Materials
+      ewc: Encyclopedia of World Cultures
+    container_type:
+      box: Box
+      folder: Folder
+      item: Item
+      bin: Bin
+      binder: Binder
+      cabinet: Cabinet
+      cassette: Cassette
+      carton: Carton
+      column: Column
+      disk: Disk
+      drawer: Drawer
+      envelope: Envelope
+      flat-file: Flat File
+      map-case: Map Case
+      map-folder: Map Folder
+      map-rolled: Map (rolled)
+      number: Number
+      object: Object
+      oversize: Oversize
+      page: Page
+      photo-folder: Photo Folder
+      reel: Reel
+      roll: Roll
+      sheet: Sheet
+      slidebox: Slide Box
+      slidenumber: Slide Number
+      tape: Tape
+      tube: Tube
+      video: Video
+      volume: Volume
+    instance_instance_type:
+      accession: Accession
+      audio: Audio
+      books: Books
+      computer_disks: Computer Disks
+      digital_object: Digital Object
+      digital_object_link: Digital Object Link
+      graphic_materials: Graphic Materials
+      maps: Maps
+      microform: Microform
+      mixed_materials: Mixed Materials
+      moving_images: Moving Images
+      realia: Realia
+      text: Text
+      photos: Photographs
+      prints: Prints
+      negatives: Negatives
+      slides: Slides
+      ephemera: Ephemera
+      slide_sheet: Slide Sheet
+      contact_sheet: Contact Sheet
+    extent_extent_type:
+      acetate_negatives: Acetate negatives
+      albumen_prints: Albumen prints
+      albums: Albums
+      ambrotypes_photographs: Ambrotypes (photographs)
+      autochromes_photographs: Autochromes (photographs)
+      binders: Binders
+      blueprint_map: Blueprint map
+      blueprints: Blueprints
+      booklets: Booklets
+      books: Books
+      boxes: Boxes
+      cabinet_photographs: Cabinet photographs
+      cans: Cans (containers)
+      card_photographs: Card photographs (photographs)
+      cartesdeviste: Cartes-de-viste (card photographs)
+      cartons: Cartons (containers)
+      cased_photographs: Cased photographs
+      cassette_tapes: Cassette tapes
+      cassettes: Cassettes
+      cd_rs: CD-Rs
+      chromolithographs: Chromolithographs
+      color_copy_print: Color copy print
+      color_copy_slides: Color copy slides
+      color_lithographs: Color lithographs
+      color_negatives: Color negatives
+      color_postcards: Color postcards
+      color_prints: Color prints
+      color_slides: Color slides
+      color_transparencies: Color transparencies
+      colored_positive: Colored positive
+      colored_prints: Colored prints
+      computer_disc35: Computer disc 3.5"
+      computer_storage_devices: Computer storage devices
+      contact_prints: Contact prints
+      contact_sheets: Contact sheets
+      containers: Containers
+      copies: Copies
+      copies_derivative_objects: Copies (derivative objects)
+      copy_color_slides: Copy color slides
+      copy_lantern_slides: Copy lantern slides
+      copy_negatives: Copy negatives
+      copy_print_of_map: Copy print of map
+      copy_prints: Copy prints
+      copy_slides: Copy slides
+      copy_stereograph: Copy stereograph
+      cubic_feet: Cubic feet
+      cultural_artifacts: Cultural artifacts
+      cyanotypes: Cyanotypes
+      cyanotypes_photographic prints: Cyanotypes (photographic prints)
+      daguerreotypes_photographs: Daguerreotypes (photographs)
+      data_cartridges: Data cartridges
+      diaries: Diaries
+      digital_files: Digital files
+      digital_images: Digital images
+      digital_prints: Digital prints
+      digital_scans: Digital scans
+      direct_positives: Direct positives
+      discs: Discs
+      documents: Documents
+      drawings: Drawings
+      drawings_visual_works: Drawings (visual works)
+      dvd: DVD
+      electronic discs_cd: Electronic discs (CD)
+      electronic discs_dvd: Electronic discs (DVD)
+      engravings: Engravings
+      enlarged_prints: Enlarged prints
+      envelopes: Envelopes
+      exhibition_catalogs: Exhibition catalogs
+      feet: Feet
+      file_drawers: File drawers
+      files: Files
+      files_document_groupings: Files (document groupings)
+      film_cartridges: Film cartridges
+      film_cassettes: Film cassettes
+      film_items: Film items
+      film_loops: Film loops
+      film_negative: Film negative
+      film_positives: Film positives
+      film_reels: Film reels
+      film_transparency: Film transparency
+      flat_boxes: Flat boxes
+      floppy_discs: Floppy discs
+      folders: Folders
+      framed_photograph: Framed photograph
+      framed_print: Framed print
+      frames: Frames
+      gelatin_silver_prints: Gelatin silver prints
+      gelatin_silver_transparencies: Gelatin silver transparencies
+      gigabytes: Gigabytes
+      glass_lantern: Glass lantern
+      glass_lantern_slide: Glass lantern slide
+      glass_negatives: Glass negatives
+      glass_plate_negatives: Glass plate negatives
+      glass_plate_stereographic_negatives: Glass plate stereographic negatives
+      glass_positives: Glass positives
+      glass_slides: Glass slides
+      glass_transparencies: Glass transparencies
+      graphite_drawings: Graphite drawings
+      hard_drives: Hard drives
+      hours_audio_tape: Hours audio tape
+      hours_video_tape: Hours video tape
+      inches: Inches
+      issues: Issues (object groupings)
+      items: Items
+      lantern_slides: Lantern slides
+      leaves: Leaves
+      leaves_gathered_matter_components: Leaves (gathered matter components)
+      ledgers: Ledgers
+      letters: Letters
+      linear_feet: Linear feet
+      lithographs: Lithographs
+      magazines_periodicals: Magazines (periodicals)
+      manuscripts_document_genre: Manuscripts (document genre)
+      map_drawers: Map drawers
+      maps: Maps
+      megabytes: Megabytes
+      memory_cards: Memory cards
+      microfilm: Microfilm
+      microfilm_reels: Microfilm reels
+      minutes: Minutes
+      modern_copy_tintype: Modern copy tintype
+      modern_prints: Modern prints
+      modern_reprints: Modern reprints
+      motion_picture_films: Motion picture films
+      mounted_color_prints: Mounted color prints
+      mounted_copy_prints: Mounted copy prints
+      mounted_photographs: Mounted photographs
+      mounted_prints: Mounted prints
+      negative_prints: Negative prints
+      negative_rolls: Negative rolls
+      negatives: Negatives
+      negatives_photographic: Negatives (photographic)
+      nitrate_negatives: Nitrate negatives
+      notebooks: Notebooks
+      oversize_folders: Oversize folders
+      pages: Pages
+      painted_photographs: Painted photographs
+      paintings: Paintings
+      paintings_visual_works: Paintings (visual works)
+      pamphlets: Pamphlets
+      panoramic_print: Panoramic print
+      perspective_drawing: Perspective drawing
+      photocopies: Photocopies
+      photograph_digital: Photograph (digital)
+      photograph_albums: Photograph albums
+      photographic_albums: Photographic albums
+      photographic_items: Photographic items
+      photographic_postcards: Photographic postcards
+      photographic_transparencies: Photographic transparencies
+      photographic_prints: Photographic prints
+      photographic_slides: Photographic slides
+      photographs: Photographs
+      photomechanical_prints: Photomechanical prints
+      pictographs: Pictographs
+      plates: Plates
+      platinum_prints: Platinum prints
+      polaroid_prints: Polaroid prints
+      polyester_negatives: Polyester negatives
+      portfolios: Portfolios
+      positive_rolls: Positive rolls
+      positives: Positives
+      positives_photographs: Positives (photographs)
+      postage_stamps: Postage stamps
+      postcards: Postcards
+      posters: Posters
+      printed_pages: Printed pages
+      printed_postcards: Printed postcards
+      printed_sketch_map: Printed sketch map
+      printing_plates: Printing plates
+      prints: Prints
+      prints_visual_works: Prints (visual works)
+      prints_and_postcards: Prints and postcards
+      prints_halftone: Prints (halftone)
+      reels: Reels
+      roll: Roll
+      rolls_of_negatives: Rolls of negatives
+      safety_film: Safety film
+      safety_film_negative: Safety film negative
+      scrapbooks: Scrapbooks
+      sections: Sections
+      sheets: Sheets
+      shoeboxes: Shoeboxes
+      sketched_map: Sketched map
+      sketches: Sketches
+      slide_boxes: Slide boxes
+      slide_viewers: Slide viewers
+      slides: Slides
+      slides_photographs: Slides (photographs)
+      sound_cartridges: Sound cartridges
+      sound_cartridges_8_track: Sound cartridges (8 track)
+      sound_cartridges_fidelipac: Sound cartridges (Fidelipac)
+      sound_cassettes: Sound cassettes
+      sound_cassettes_dat: Sound cassettes (DAT)
+      sound_cassettes_microcassette: Sound cassettes (microcassette)
+      sound_cylinders: Sound cylinders
+      sound_discs: Sound discs
+      sound_discs_aluminum: Sound discs (aluminum)
+      sound_discs_cd: Sound discs (CD)
+      sound_discs_lacquer: Sound discs (lacquer)
+      sound_discs_minidisc: Sound discs (Minidisc)
+      sound_discs_vinyl: Sound discs (vinyl)
+      sound_disk_cdr: Sound disk CD-R
+      sound_recordings: Sound recordings
+      sound_tape_reels: Sound tape reels
+      sound_tape_reels_nagra_sn: Sound tape reels (NAGRA SN)
+      sound_tapes: Sound tapes
+      sound_track_film_reels: Sound track film reels
+      sound_wire_reels: Sound wire reels
+      stamps: Stamps
+      stereo_negatives: Stereo negatives
+      stereographs: Stereographs
+      terabytes: Terabytes
+      tintypes: Tintypes
+      tintypes_prints: Tintypes (prints)
+      transparencies: Transparencies
+      undetermined: Undetermined
+      usb_flash_drive: USB flash drive
+      video_recordings: Video recordings
+      videocartridges: Videocartridges
+      videocassette_beta: Videocassette (Beta)
+      videocassettes: Videocassettes
+      videocassettes_betacam: Videocassettes (Betacam)
+      videocassettes_betacamsp: Videocassettes (BetacamSP)
+      videocassettes_betamax: Videocassettes (Betamax)
+      videocassettes_d-1: Videocassettes (D-1)
+      videocassettes_d-2: Videocassettes (D-2)
+      videocassettes_digital_betacam: Videocassettes (Digital Betacam)
+      videocassettes_dvcam: Videocassettes (DVCam)
+      videocassettes_dvcpro: Videocassettes (DVCPro)
+      videocassettes_hdcam: Videocassettes (HDCam)
+      videocassettes_hi8: Videocassettes (Hi8)
+      videocassettes_minidv: Videocassettes (MiniDV)
+      videocassettes_s-vhs: Videocassettes (S-VHS)
+      videocassettes_u-matic: Videocassettes (U-matic)
+      videocassettes_vhs: Videocassettes (VHS)
+      videocassettes_vhs-c: Videocassettes (VHS-C)
+      videocassettes_video_8: Videocassettes (Video 8)
+      videodiscs: Videodiscs
+      videodiscs_bluray: Videodiscs (Blu-ray)
+      videodiscs_dvd: Videodiscs (DVD)
+      videodiscs_laser: Videodiscs (laser)
+      videoreels: Videoreels
+      videoreels_1_inch: Videoreels (1 inch)
+      videoreels_half_inch: Videoreels (1/2 inch)
+      videoreels_2_inch: Videoreels (2 inch)
+      visual_works: Visual works (works)
+      volumes: Volumes
+      watercolor: Watercolor
+    restriction_type:
+      by_appointment: Appointment required
+      closed_during_processing: Closed during processing
+      closed_until_processed: Closed until processed 
+      restricted_acquisition_agreement: "[DACS 4.1] Access restrictions: acquisition agreement"
+      restricted_permission: "[DACS 4.1] Access restrictions: permission required"
+      restricted_repository_policy: "[DACS 4.1] Access restrictions: repository policy"
+      restricted_content_sensitivity: "[DACS 4.1] Access restrictions: cultural sensitivity"
+      restricted_content_privacy: "[DACS 4.1] Access restrictions: privacy policy (PII, PHI)"
+      restricted_physical_access_cold: "[DACS 4.2] Physical access restrictions: cold storage"
+      restricted_physical_access_offsite: "[DACS 4.2] Physical access restrictions: offsite"
+      restricted_physical_access_copies: "[DACS 4.2] Physical access restrictions: access copies only"
+      restricted_physical_access_condition: "[DACS 4.2] Physical access restrictions: fragile"
+      restricted_technical_requirements: "[DACS 4.3] Technical requirements"
+      restricted_other: Other restrictions
+      RestrictedSpecColl: z - Donor/university imposed access restriction
+      RestrictedCurApprSpecColl: z - Repository imposed access restriction
+      RestrictedFragileSpecColl: z - Restricted fragile
+      InProcessSpecColl: z - Restricted in-process
+      ColdStorageBrbl: z - Other / cold storage
+    file_version_use_statement:
+      audio-clip: Audio-Clip
+      audio-master: Audio-Master
+      audio-master-edited: Audio-Master-Edited
+      audio-service: Audio-Service
+      audio-streaming: Audio-Streaming
+      audio-use: Audio-Use
+      electronic-record-master: Electronic-Record-Master
+      electronic-record-use-copy: Electronic-Record-Use-Copy
+      image-master: Image-Master
+      image-master-edited: Image-Master-Edited
+      image-service: Image-Service
+      image-service-edited: Image-Service-Edited
+      image-service-highres: Image-Service-HighRes
+      image-service-lowres: Image-Service-LowRes
+      image-service-medres: Image-Service-MedRes
+      image-thumbnail: Image-Thumbnail
+      text-codebook: Text-Codebook
+      text-data: Text-Data
+      text-data_definition: Text-Data Definition
+      text-georeference: Text-Georeference
+      text-master: Text-Master
+      text-ocr-edited: Text-Ocr-Edited
+      text-ocr-unedited: Text-Ocr-Unedited
+      text-service: Text-Service
+      text-tei-transcripted: Text-Tei-Transcripted
+      text-tei-translated: Text-Tei-Translated
+      video-clip: Video-Clip
+      video-master: Video-Master
+      video-master-edited: Video-Master-Edited
+      video-service: Video-Service
+      video-streaming: Video-Streaming
+      web-resource-link: Web-Resource-Link      

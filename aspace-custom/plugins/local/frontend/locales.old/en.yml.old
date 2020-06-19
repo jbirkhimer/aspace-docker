@@ -1,0 +1,116 @@
+# 2018-01-30  - translations for labels, messages and tooltips for the Smithsonian Institution
+# version 2.2.2
+
+en:
+  welcome:
+    heading: Welcome to the Smithsonian ArchivesSpace
+    message: ArchivesSpace is your friendly archives management tool. For help, start with the  <a href="https://collab.si.edu/sites/OUSFA-OCIO/LASSB/SitePages/ArchivesSpace.aspx" target="_blank">SI ArchivesSpace SharePoint</a>.<br/>Published finding aids are available at the <a href="http://sova.si.edu/"  target="_blank">Smithsonian Online Virtual Archives.</a> <br/> <br/> <div align="center"><img src="http://sirismm.si.edu/siris/ASpaceWelcome.jpg" width="100%" align="top"> </div>
+    message_logged_in: ArchivesSpace is your friendly archives management tool. For help, start with the <a href="https://collab.si.edu/sites/OUSFA-OCIO/LASSB/SitePages/ArchivesSpace.aspx" target="_blank">SI ArchivesSpace SharePoint</a>.<br/>Published finding aids are available at the <a href="http://sova.si.edu/"  target="_blank">Smithsonian Online Virtual Archives.</a> <br/> <br/> <div align="center"><img src="http://sirismm.si.edu/siris/ASpaceWelcome.jpg" width="100%" align="top"> </div>
+
+  search_results:
+    filter:
+      enum_1_enum_s: New/Addition
+      acquisition_type: Acquisition Type
+      finding_aid_status: Finding Aid Status
+      classification_paths: Classifications
+
+  resource:
+    id_0_tooltip: |
+        <p>REQUIRED FIELD. The identification number assigned to each Resource.
+        <p>See DACS 2.1.3</p>
+        <p>Must begin with your unit code ('AAA', 'NMAI', etc).  Do not use special characters. Examples:</p>
+        <ul>
+        <li>AAA.blueosca</li>
+        <li>NMAH.AC.0005</li>
+        </ul>
+    publish_tooltip: |
+        <p>Controls the audience setting. If unchecked, will export as audience="internal" and will NOT display publicly on SOVA</p>
+    ead_id_tooltip: |
+        <p>The unique, persistent identifier for the EAD. The EADID is intended to remain persistent.
+        <p>Do not use special characters. Letters, numbers, dots and dashes are ok, but no spaces or special characters</p>
+        <p>The EADID is typically same-as your Resource Identifier (up to four segments, joined by ".")</p>
+    ead_id_inline_help: e.g. AAA.blueosca, NMAH.AC.0005, AAG.LVC
+    ead_location_tooltip: |
+        <p>The URL for the published EAD file. Typically, a SOVA record URL.</p>
+    ead_location_inline_help: https://sova.si.edu/record/[eadid]
+    finding_aid_title_tooltip: |
+        <p>The title for the finding aid associated with this Resource.</p>
+        <p>Often same-as the DACS compliant Resource title, though may include title-page phrasing such as "Guide to the".</p>
+        <p>Examples:</p>
+        <ul>
+        <li>Guide to the Example Photograph Collection, 1870-2006</li>
+        </ul>
+    finding_aid_language_tooltip: |
+        <p>The language you've used to write the finding aid. In nearly all cases at the SI, this is English.</p>
+        <p>Not to be confused with Language of Materials.</p>
+    finding_aid_status_tooltip: |
+        <p>Select "Published" to upload this record to SOVA</p>
+        <p>Use other options according to your unit workflows</p>
+    finding_aid_note_tooltip: |
+        <p>Use this field to record the corresponding Horizon bib record database type and number.</p>
+        <p>This field is synced with the Horizon 909 field.</p>
+        <p>Example:</p>
+        <ul>
+        <li>Associated with MARC record <num type="siris_arc">99999</num>.</li>
+        </ul>
+    user_defined:
+      boolean_1: Electronic Media?
+      boolean_1_tooltip: |
+          <p>Does the resource contain electronic media?</p>
+      string_4: DO Import RefID
+      string_4_tooltip: |
+          <p>Reserved for DO import linking.</p>
+          <p>During import, provide the EAD Ref ID of an associated record for automated linking.</p>
+      text_1: Testing
+
+
+  archival_object:
+    publish_tooltip: |
+        <p>Controls the audience setting. If unchecked, will export as audience="internal" and will NOT display publicly on SOVA</p>
+    component_id_tooltip: |
+        <p>A unique ID, within the context of the resource description, for this component part.</p>
+        <p>Note: do not prefix with text, such as the level "Series". Your level setting will act as the label for this identifier.</p>
+        <p>Example:</p>
+        <ul>
+        <li>for a series level, record "1"</li>
+        <li>for a subseries level, record "1.1"</li>
+        <li>in rare cases, record a file or item level call-number that uniquely identifies this component part of the collection</p>
+        </ul>
+    ref_id_tooltip: |
+        <p>An automatically generated reference ID. The Ref ID is intended to remain persistent.</p>
+        <p>At the SI, the ref id generated from the resource level EADID + _ + ref###.</p>
+        <p>Example:</p>
+        <ul>
+        <li>NMAH.AC.0005_ref123</li>
+        </ul>
+
+  accession:
+    disposition: Disposition
+    disposition_tooltip: |
+      <p>A note about what should be done with discards or duplicates, or a note to describe how a particular accession may have been assigned to different resources.</p>
+    disposition_inline_help: Describe what should be done with discards or duplicates
+ #   user_defined:
+ #     boolean_1: Electronic Media?
+ #     boolean_1_tooltip: |
+ #       <p>Does the accession contain electronic media?</p>
+ #     string_2: String 2
+ #     string_2_placeholder: Reserved
+ #     string_2_tooltip: |
+ #         <p>Reserved for data integrations</p>
+ #     string_3: String 3
+ #     string_3_placeholder: Reserved
+ #     string_3_tooltip: |
+ #         <p>Reserved for data integrations</p>
+ #     string_4: DO Import RefID
+ #     string_4_placeholder: Reserved
+ #     string_4_tooltip: |
+ #         <p>Reserved for DO import linking.</p>
+ #         <p>During import, provide the EAD Ref ID of an associated record for automated linking.</p>
+ #     enum_1: New or Addition?
+ #     enum_1_inline_help: FOR TESTING ONLY
+
+
+#  user_defined:
+#    _singular: SI Custom - do not use
+#    _plural: SI Custom - do not use
+

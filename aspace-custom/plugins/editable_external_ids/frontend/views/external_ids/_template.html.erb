@@ -1,0 +1,13 @@
+<% define_template "external_id", jsonmodel_definition(:external_id) do |form| %>
+  <div class="subrecord-form-fields">
+    <% if user_can?('administer_system') %>
+      <%= form.label_and_textfield "source" %>
+      <%= form.label_and_textfield "external_id" %>
+    <% else %>
+      <%= form.label_and_readonly "source" %>
+      <%= form.hidden_input("source") %>
+      <%= form.label_and_readonly "external_id" %>
+      <%= form.hidden_input("external_id") %>
+    <% end %>
+  </div>
+<% end %>

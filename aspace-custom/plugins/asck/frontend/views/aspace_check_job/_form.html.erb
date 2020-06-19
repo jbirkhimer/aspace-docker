@@ -1,0 +1,41 @@
+<%
+  columns = 3
+%>
+
+<div class="row">
+  <div class="col-md-6">
+    <h4><%= I18n.t('aspace_check_job.validation_section') %></h4>
+    <%= I18n.t('aspace_check_job.validation_help') %>
+  </div>
+</div>
+
+<%= form.label_and_boolean "skip_validation" %>
+
+<div class="row">
+  <div class="col-md-6">
+    <h4>Models</h4>
+    <%= I18n.t('aspace_check_job.models_help') %>
+  </div>
+</div>
+
+<div class="row">
+
+<% models_to_check.each_slice((models_to_check.length/columns.to_f).ceil) do |models_slice| %>
+  <div class="col-md-<%= 12/columns  %>">
+    <% models_slice.each do |model| %>
+      <div class="form-group">
+        <div class="col-sm-1 checkbox">
+          <%= form.checkbox("models[]", {:value => model}, false) %>
+        </div>
+        <label class="col-sm-4 control-label"
+               style="text-align:left"
+               for="aspace_check_job_models[]_"
+               col_size="4">
+          <%= model %>
+        </label> 
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+</div>

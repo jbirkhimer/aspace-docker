@@ -1,0 +1,152 @@
+en:  
+  enumerations:
+    accession_acquisition_type:
+      gift: Gift
+      fractional_partial_gift: Fractional or Partial Gift
+      bequest: Bequest
+      purchase: Purchase
+      bargain_sale: Bargain Sale
+      exchange: Exchange
+      transfer: Transfer
+      transfer_governmental: Governmental Transfer 
+      transfer_internal: Internal Transfer
+      field_collection: Field Collection
+      found_in_collection: Found in Collection
+      propagation: Propagation
+      deposit: Deposit
+      commissioned: Commissioned (Made For)      
+    resource_finding_aid_status:
+      publish: Publish (sync with EDAN/SOVA)
+      in_progress: In progress
+      under_revision: Under revision
+      review: Review
+      unprocessed: Unprocessed
+      staff_only: Staff Only
+    name_source:
+      ingest: Unspecified ingested source
+      lcshac: Library of Congress Children's Subject Headings
+      local: Local sources
+      naf: NACO Authority File
+      nad: NAD / ARK II Name Authority Database
+      ulan: Union List of Artist Names
+      source_not_specified: Source Not Specified
+    subject_term_type:
+      cultural_context: Culture
+      function: Function 
+      genre_form: Genre / Form    
+      geographic: Geographic  
+      occupation: Occupation 
+      style_period: Style / Period    
+      technique: Technique   
+      temporal: Temporal    
+      topical: Topic 
+      uniform_title: Uniform Title
+    subject_source:
+      aat: "Art & Architecture Thesaurus"
+      cash: Canadian Subject Headings
+      gmgpc: "TGM II, Genre and physical characteristic terms"
+      ingest: Unspecified ingested source
+      lcsh: Library of Congress Subject Headings
+      lcshac: Library of Congress Children's Subject Headings
+      local: Local sources
+      mesh: Medical Subject Headings
+      nal: National Agricultural Library subject headings
+      rbgenr: "Genre Terms: A Thesaurus for Use in Rare Book and Special Collections Cataloguing"
+      tgn: Getty Thesaurus of Geographic Names
+      source_not_specified: Source Not Specified
+      afset: American Folklore Society Ethnographic Thesaurus
+      hraf: Human Relations Area Files
+      smda: Smithsonian National Air and Space Museum Directory of Airplanes
+      lctgm: Thesaurus for Graphic Materials
+      ewc: Encyclopedia of World Cultures
+    container_type:
+      box: Box
+      folder: Folder
+      item: Item
+      bin: Bin
+      cassette: Cassette
+      disk: Disk
+      cabinet: Cabinet
+      drawer: Drawer
+      map-case: Map Case
+      map-folder: Map Folder
+      map-rolled: Map (rolled)
+      photo-folder: Photo Folder
+      video: Video
+      flat-file: Flat File
+    instance_instance_type:
+      accession: Accession
+      audio: Audio
+      books: Books
+      computer_disks: Computer Disks
+      digital_object: Digital Object
+      digital_object_link: Digital Object Link
+      graphic_materials: Graphic Materials
+      maps: Maps
+      microform: Microform
+      mixed_materials: Mixed Materials
+      moving_images: Moving Images
+      realia: Realia
+      text: Text
+      photos: Photos
+      prints: Prints
+      negatives: Negatives
+      slides: Slides
+      ephemera: Ephemera
+      slide_sheet: Slide Sheet
+      contact_sheet: Contact Sheet
+    restriction_type:
+      RestrictedSpecColl: 1 - Donor/university imposed access restriction
+      RestrictedCurApprSpecColl: 2 - Repository imposed access restriction
+      RestrictedFragileSpecColl: 3 - Restricted fragile
+      InProcessSpecColl: 4 - Restricted in-process
+      ColdStorageBrbl: 5 - Other
+      closed_for_processing: Closed for processing
+      closed_until_processed: Closed until processing  
+      closed_by_repository_policy: Closed by repository policy
+      closed_donor_request: Closed by donor request
+      restricted_unless_donor_permission: Restricted unless donor permission          
+      restricted_content_sensitivity: Restricted content - sensitivity
+      restricted_content_medical: Restricted content - medical
+      restricted_content_privacy: Restricted content - privacy concerns (PII, PHI, student records, personnel records)
+      restricted_content_personnel: Restricted content - personnel records
+      restricted_physical_access_offsite: Restriction - Offsite
+      restricted_physical_access_cold: Restriction - Cold Storage
+      restricted_physical_access_copies: Restriction - access to reference copies only
+      restricted_physical_access_condition: Restriction - physical condition, fragile
+      restricted_technical_requirements: Restricted - technical requirements for access
+      restricted_other: Other
+    file_version_use_statement:
+      audio-clip: Audio-Clip
+      audio-master: Audio-Master
+      audio-master-edited: Audio-Master-Edited
+      audio-service: Audio-Service
+      audio-streaming: Audio-Streaming
+      audio-use: Audio-Use
+      electronic-record-master: Electronic-Record-Master
+      electronic-record-use-copy: Electronic-Record-Use-Copy
+      image-master: Image-Master
+      image-master-edited: Image-Master-Edited
+      image-service: Image-Service
+      image-service-edited: Image-Service-Edited
+      image-service-highres: Image-Service-HighRes
+      image-service-lowres: Image-Service-LowRes
+      image-service-medres: Image-Service-MedRes
+      image-thumbnail: Image-Thumbnail
+      text-codebook: Text-Codebook
+      text-data: Text-Data
+      text-data_definition: Text-Data Definition
+      text-georeference: Text-Georeference
+      text-master: Text-Master
+      text-ocr-edited: Text-Ocr-Edited
+      text-ocr-unedited: Text-Ocr-Unedited
+      text-service: Text-Service
+      text-tei-transcripted: Text-Tei-Transcripted
+      text-tei-translated: Text-Tei-Translated
+      video-clip: Video-Clip
+      video-master: Video-Master
+      video-master-edited: Video-Master-Edited
+      video-service: Video-Service
+      video-streaming: Video-Streaming
+      web-resource-link: Web-Resource-Link
+      

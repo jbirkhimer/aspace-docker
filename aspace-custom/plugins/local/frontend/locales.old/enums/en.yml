@@ -1,0 +1,86 @@
+en:  
+  enumerations:
+    accession_acquisition_type:
+      gift: Gift
+      fractional_partial_gift: Fractional or Partial Gift
+      bequest: Bequest
+      purchase: Purchase
+      bargain_sale: Bargain Sale
+      exchange: Exchange
+      transfer: Transfer
+      transfer_governmental: Governmental Transfer 
+      transfer_internal: Internal Transfer
+      field_collection: Field Collection
+      found_in_collection: Found in Collection
+      propagation: Propagation
+      deposit: Deposit
+      commissioned: Commissioned (Made For)      
+    resource_finding_aid_status:
+      publish: Publish (sync with EDAN/SOVA)
+      in_progress: In progress
+      under_revision: Under revision
+      review: Review
+      unprocessed: Unprocessed
+      staff_only: Staff Only
+    name_source:
+      ingest: Unspecified ingested source
+      lcshac: Library of Congress Children's Subject Headings
+      local: Local sources
+      naf: NACO Authority File
+      nad: NAD / ARK II Name Authority Database
+      ulan: Union List of Artist Names
+      source_not_specified: Source Not Specified
+    subject_source:
+      aat: "Art & Architecture Thesaurus"
+      cash: Canadian Subject Headings
+      gmgpc: "TGM II, Genre and physical characteristic terms"
+      ingest: Unspecified ingested source
+      lcsh: Library of Congress Subject Headings
+      lcshac: Library of Congress Children's Subject Headings
+      local: Local sources
+      mesh: Medical Subject Headings
+      nal: National Agricultural Library subject headings
+      rbgenr: "Genre Terms: A Thesaurus for Use in Rare Book and Special Collections Cataloguing"
+      tgn: Getty Thesaurus of Geographic Names
+      source_not_specified: Source Not Specified
+      afset: American Folklore Society Ethnographic Thesaurus
+      hraf: Human Relations Area Files
+      smda: Smithsonian National Air and Space Museum Directory of Airplanes
+      lctgm: Thesaurus for Graphic Materials
+      ewc: Encyclopedia of World Cultures
+    container_type:
+      box: Box
+      folder: Folder
+      item: Item
+      bin: Bin
+      cassette: Cassette
+      disk: Disk
+      cabinet: Cabinet
+      drawer: Drawer
+      map-case: Map Case
+      map-folder: Map Folder
+      map-rolled: Map (rolled)
+      photo-folder: Photo Folder
+      video: Video
+      flat-file: Flat File
+    instance_instance_type:
+      accession: Accession
+      audio: Audio
+      books: Books
+      computer_disks: Computer Disks
+      digital_object: Digital Object
+      digital_object_link: Digital Object Link
+      graphic_materials: Graphic Materials
+      maps: Maps
+      microform: Microform
+      mixed_materials: Mixed Materials
+      moving_images: Moving Images
+      realia: Realia
+      text: Text
+      photos: Photos
+      prints: Prints
+      negatives: Negatives
+      slides: Slides
+      ephemera: Ephemera
+      slide_sheet: Slide Sheet
+      contact_sheet: Contact Sheet

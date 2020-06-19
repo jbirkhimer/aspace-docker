@@ -2,8 +2,8 @@
 
 function setup_database {
     # Wait until MySQL is up
-    while ! mysqladmin ping -h"db" -P"3306" --silent; do
-        echo "Waiting for db to be up..."
+    while ! mysqladmin ping -h"aspace-db" -P"3306" --silent; do
+        echo "Waiting for aspace-db to be ready..."
         sleep 1
     done
 
@@ -36,6 +36,12 @@ case "$1" in
                 sed -i "s/yourhostname/`hostname`/g" config/instance_`hostname`.rb
             fi
 
+        done
+
+        # Wait until MySQL is up
+        while ! mysqladmin ping -h"aspace-db" -P"3306" --silent; do
+            echo "Waiting for aspace-db to be ready..."
+            sleep 1
         done
 
         /aspace/aspace-cluster.init start

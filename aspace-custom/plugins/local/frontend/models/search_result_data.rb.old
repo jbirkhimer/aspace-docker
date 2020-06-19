@@ -1,0 +1,33 @@
+# plugins/local/frontend/models/search_result_data.rb
+# redefines facets, which you can see at:
+# https://github.com/archivesspace/archivesspace/blob/master/frontend/app/models/search_result_data.rb#L215-L257
+
+
+require Rails.root.join('app/models/search_result_data')
+
+class SearchResultData
+
+# 2017-10-01 SMITHSONIAN customization: this changes what facets are requested for Accessions, Resources, DO, Subjects, Location . 
+# Smithsonian gyb
+# Display order follows the order in the array. 
+
+  def self.ACCESSION_FACETS
+    ["acquisition_type", "enum_1_enum_s", "accession_date_year", "creators"]
+  end
+  
+  def self.RESOURCE_FACETS
+    [ "primary_type", "level", "finding_aid_status"]
+  end
+
+  def self.DIGITAL_OBJECT_FACETS
+    ["publish","digital_object_type"]
+  end
+
+ def self.SUBJECT_FACETS
+   ["first_term_type","source"]
+ end
+ 
+  def self.LOCATION_FACETS
+    ["temporary", "building", "floor", "room", "area", "location_profile_display_string_u_ssort"]
+  end
+end
