@@ -1,20 +1,19 @@
 # Build the file system for archivesspace and create tenants
 
-> Currently only one tenant (default `aspace`) is created, however the `aspace-docker-start.sh` and `aspace-docker-setup.sh` scripts can be modified to create more tenants
-
-Start by editing `aspace-docker-start.sh` and modify/set `tenant_name`, `nodes`, and `data_dir` for db and solr data persistence
+Start by editing `.env` and modify/set `TENANT_LIST`, `NODES`, and `ASPACE_DATA_DIR` for data persistence
 
 Make any Archivesspace config changes that are needed and verify everything else
 `vi ./aspace-custom/config.rb`
 
+> NOTE: `config.rb` properties can also be set in the `.env` file using `APPCONFIG_` prefix. These properties will be set as environment properties and Archivesspace picks them up during startup.  
 > NOTE: The `./aspace-custom/config.rb` file is a copy of SI Archivesspace production and all passwords have been replaced with `<secret>`
 
-Then run `./aspace-docker-start.sh build` which will download the Archivesspace release version and configure everything that is needed.
+Then run `./aspace-docker-start.sh build` which will download the Archivesspace release version build the tenants and configure everything that is needed.
 
-> Before starting make sure the `data_dir/solr/data` dir has `8983:8983` uid:gid set otherwise solr will fail to start correctly. 
+> WARNING: Before starting make sure the `<ASPACE_DATA_DIR>/solr/data` dir has `8983:8983` uid:gid set otherwise solr will fail to start correctly. 
 
 
-## To start over fresh (WARNING: all data will be lost!!! Make sure you know what you are doing!)  
+## To start over fresh (WARNING: all data in the containers will be lost!!! Make sure you know what you are doing!)  
 ```
 # Stop any containers that may be still running
 ./aspace-docker-start.sh stop
@@ -22,8 +21,8 @@ Then run `./aspace-docker-start.sh build` which will download the Archivesspace 
 ### WARNING: the following cmd will also remove all docker networks, volumes, images, and containers that are not currently in use!!! ###
 docker volume prune -f && docker container prune -f && docker image prune -f && docker network prune -f
 
-# Delete the build dir and data_dir (WARNING: all existing data will be lost!!!)
-sudo rm -rf ./aspace/archivesspace ./aspace/nginx ./aspace/aspace-cluster.init ./docker-data
+# Delete ASPACE_DATA_DIR (WARNING: all existing data will be lost!!!)
+sudo rm -rf <ASPACE_DATA_DIR>
 
 # rebuild everything
 ./aspace-docker-start.sh build
@@ -67,3 +66,8 @@ docker stats                            # View mem, cpu, i/o, etc for running co
 docker network inspect aspace_net       # view the ip's of containers on the aspace_net network
 docker --help                           # help!
 ```
+
+# Issues:
+
+- Errors during db migration from v2.6.0 to v2.7.1 see https://gist.github.com/jbirkhimer/7ac3b94628555f67a32c003d158851a8
+

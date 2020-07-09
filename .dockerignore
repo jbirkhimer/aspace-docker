@@ -2,6 +2,7 @@
 .idea
 **/Dockerfile
 aspace-custom
+!aspace-custom/docker-entrypoint.sh
 docker-data
 mysql
 **/*.sql

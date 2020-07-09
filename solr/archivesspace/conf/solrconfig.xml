@@ -19,7 +19,7 @@
        configuration.
     -->
   <!--<dataDir>${solr.data.dir:}</dataDir>-->
-  <dataDir>/archivesspace-data/data</dataDir>
+  <dataDir>/archivesspace-data/${solr.core.name}</dataDir>
 
 
   <!-- The DirectoryFactory to use for indexes.

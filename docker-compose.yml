@@ -1,0 +1,83 @@
+version: '3.7'
+
+services:
+
+  aspace-loadbalancer:
+    image: aspace-loadbalancer:latest
+    container_name: aspace-loadbalancer
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    hostname: aspace-loadbalancer
+    networks:
+      - aspace_net
+    ports:
+      - 80:80
+    depends_on:
+      - aspace
+    restart: always
+    volumes:
+      - ${ASPACE_DATA_DIR:-./docker-data}/aspace:/aspace
+
+  aspace:
+    image: aspace-tenant
+    build:
+      context: .
+      dockerfile: aspace-custom/Dockerfile
+    env_file:
+      - .env
+    restart: on-failure
+    deploy:
+      resources:
+        limits:
+          cpus: '2.00'
+          memory: 32G
+        reservations:
+          cpus: '0.25'
+          memory: 16G
+    depends_on:
+      - aspace-db
+      - aspace-solr
+    networks:
+      - aspace_net
+    volumes:
+      - ${ASPACE_DATA_DIR:-./docker-data}/aspace:/aspace
+    healthcheck:
+      test: wget -q --spider http://localhost:8089/ || exit 1
+      timeout: 45s
+      interval: 30s
+      retries: 20
+
+  aspace-db:
+    image: $DATABASE_IMAGE
+    container_name: aspace-db
+    env_file:
+      - .env
+    command: --character-set-server=utf8
+    restart: always
+    hostname: aspace-db
+    networks:
+      - aspace_net
+    ports:
+      - ${HOST_MACHINE_MYSQL_PORT}:3306
+    volumes:
+      - ./mysql/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+      - ${ASPACE_DATA_DIR:-./docker-data}/mysql:/var/lib/mysql
+#      - ${MYSQL_DATA_DIR:?err}:/var/lib/mysql
+#      - ${MYSQL_LOG_DIR:?err}:/var/log/mysql
+#      - ${MYSQL_SQL_CREAT_DIR:?err}:/docker-entrypoint-initdb.d
+
+  aspace-solr:
+    container_name: aspace-solr
+    image: solr:6.6.1
+    command: bash -c "precreate-core aspace /archivesspace; precreate-core aaa /archivesspace; exec solr -f"
+    networks:
+      - aspace_net
+    ports:
+      - 8983:8983
+    volumes:
+    - ./solr/archivesspace:/archivesspace
+    - ${ASPACE_DATA_DIR:-./docker-data}/solr:/archivesspace-data
+
+networks:
+  aspace_net:
