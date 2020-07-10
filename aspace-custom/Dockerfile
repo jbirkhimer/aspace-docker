@@ -8,8 +8,12 @@ RUN apt-get update && apt-get -y upgrade && apt-get install -y --no-install-reco
     multitail \
 	&& rm -rf /var/lib/apt/lists/*
 
+ARG USER
+ARG UID
+ARG GID
+
 RUN set -eux && \
-    useradd -m -s /bin/bash -u 1000 aspace
+    useradd -m -s /bin/bash -u $UID $USER
 
 RUN mkdir -p /aspace.local
 
