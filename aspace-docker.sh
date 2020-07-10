@@ -20,15 +20,19 @@ function build {
     mkdir -p $data_dir/mysql
 
     for tenant_name in ${tenant_list//,/ }; do
-        mkdir -p $data_dir/solr/{$tenant_name}
+        mkdir -p $data_dir/solr/$tenant_name
     done
-    sudo chown -R 8983:8983 $data_dir/solr
+    chown -R 8983:8983 $data_dir/solr
 
     cd $aspace_base_dir/archivesspace/software/
 
-#    wget https://github.com/archivesspace/archivesspace/releases/download/v$version/archivesspace-v$version.zip \
-    cp $base_dir/archivesspace-v$version.zip ./ \
-    && unzip -x -q archivesspace-v$version.zip
+    if [ -f $base_dir/archivesspace-v$version.zip ]; then
+        cp $base_dir/archivesspace-v$version.zip ./
+    else
+        wget https://github.com/archivesspace/archivesspace/releases/download/v$version/archivesspace-v$version.zip
+    fi
+
+    unzip -x -q archivesspace-v$version.zip
 
     mv archivesspace archivesspace-$version
 
@@ -38,7 +42,7 @@ function build {
 
     sed -i "s/FILE/__FILE__/g" $aspace_base_dir/archivesspace/config/config.rb
 
-    cd ./stable/lib && wget https://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.24/mysql-connector-java-5.1.24.jar
+    curl https://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.24/mysql-connector-java-5.1.24.jar -o stable/lib/mysql-connector-java-5.1.24.jar
 
     sed -i "/.*RUN_AS=\"appuser\"/c\RUN_AS=aspace" $aspace_base_dir/aspace-cluster.init
 #    sed -i "/\.\/archivesspace\.sh start/c\    ./archivesspace.sh" $aspace_base_dir/aspace-cluster.init
@@ -52,6 +56,8 @@ function build {
         config_db $tenant_name
     done
 
+    cd $base_dir
+    docker-compose build --no-cache --build-arg UID=$(id -u) --build-arg GID=$(id -g) --build-arg USER=$(whoami)
 }
 
 function config_plugins {

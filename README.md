@@ -1,4 +1,23 @@
+# Install Docker and Docker Compose and create docker group
+
+https://docs.docker.com/engine/install/centos/
+https://docs.docker.com/compose/install/
+https://docs.docker.com/engine/install/linux-postinstall/
+
+# Create User
+
+```
+sudo adduser -m -s /bin/bash aspace
+sudo usermod -aG docker aspace
+```
+
 # Build the file system for archivesspace and create tenants
+
+```
+git clone https://github.com/jbirkhimer/aspace-docker.git
+sudo ln -s <path-to-repo>/aspace-docker /opt/aspace-docker
+sudo chown -R aspace:aspace /opt/aspace-docker
+```
 
 Start by editing `.env` and modify/set `TENANT_LIST`, `NODES`, and `ASPACE_DATA_DIR` for data persistence
 
