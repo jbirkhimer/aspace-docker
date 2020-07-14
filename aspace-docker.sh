@@ -44,7 +44,7 @@ function build {
 
     curl https://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.24/mysql-connector-java-5.1.24.jar -o stable/lib/mysql-connector-java-5.1.24.jar
 
-    sed -i "/.*RUN_AS=\"appuser\"/c\RUN_AS=aspace" $aspace_base_dir/aspace-cluster.init
+    sed -i "/.*RUN_AS=\"appuser\"/c\RUN_AS=$(whoami)" $aspace_base_dir/aspace-cluster.init
 #    sed -i "/\.\/archivesspace\.sh start/c\    ./archivesspace.sh" $aspace_base_dir/aspace-cluster.init
 
     config_plugins
